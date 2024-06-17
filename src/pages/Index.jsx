@@ -1,17 +1,24 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Box, Button, Image } from "@chakra-ui/react";
+import { FaRoad } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={6}>
+        <Box textAlign="center">
+          <Heading as="h1" size="2xl" mb={4}>
+            Welcome to Road Explorer
+          </Heading>
+          <Text fontSize="lg">
+            Discover the most amazing roads around the world.
+          </Text>
+        </Box>
+        <Box boxSize="sm">
+          <Image src="/images/road.jpg" alt="Scenic Road" borderRadius="md" />
+        </Box>
+        <Button colorScheme="teal" size="lg" leftIcon={<FaRoad />}>
+          Start Your Journey
+        </Button>
       </VStack>
     </Container>
   );
